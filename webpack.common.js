@@ -1,10 +1,10 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 
-    
   entry: './src/index.tsx',
   resolve: {
     extensions: ['.ts', '.tsx', '.js']
@@ -18,16 +18,21 @@ module.exports = {
       {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader'
-      },
-      {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html'
-    })
+      template: './public/index.html',
+
+
+    }),
+
+    new CopyPlugin([
+      { from: './public/img', to: 'img' },
+      { from: './public/styles', to: 'styles' },
+      { from: './public/fonts', to: 'fonts' },
+    ]),
+    
   ]
 }

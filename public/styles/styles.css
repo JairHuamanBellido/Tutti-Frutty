@@ -1,0 +1,42 @@
+@import "./fonts.css";
+@import "./pages/Register.css";
+:root {
+    --main-color: #9818D6;
+}
+* {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gsans' !important;
+    outline: none;
+}
+
+button{
+    cursor: pointer;
+}
+.btn-primary{
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    background: var(--main-color);
+}
+
+.input-large{
+    width: 320px;
+    font-size: 16px;
+    text-align: center;
+    border:1px solid #ECECEC;
+    border-radius: 8px;
+    padding: 12px 0;
+    transition: all .2s ease-in-out;
+}
+.input-large:focus{
+    border: 1px solid var(--main-color) !important;
+}
+::placeholder{
+    color: #cbcbcb;
+}
+

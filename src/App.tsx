@@ -1,10 +1,28 @@
-import React from 'react';
-export default class App extends React.Component{
+import React from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
+import RegisterPage from "./Pages/Register/register";
+import HomePage from "./Pages/Home/Home";
+export default class App extends React.Component {
 
 
-    render(){
-        return(
-            <h1>Hola mundo</h1>
-        )
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    <Route exact={true} path="/">
+                        <RegisterPage />
+                    </Route>>
+                    <Route exact={true} path="/home">
+                        <HomePage />
+                    </Route>>
+
+                </Switch>
+            </Router>)
     }
 }
