@@ -8,6 +8,8 @@ import {
 
 import RegisterPage from "./Pages/Register/register";
 import HomePage from "./Pages/Home/Home";
+
+
 export default class App extends React.Component {
 
 
