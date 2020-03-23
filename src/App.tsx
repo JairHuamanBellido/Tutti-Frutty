@@ -6,7 +6,7 @@ import {
     Link
 } from "react-router-dom";
 
-import RegisterPage from "./Pages/Register/register";
+import RegisterPage from "./Pages/Register/Register";
 import HomePage from "./Pages/Home/Home";
 
 
